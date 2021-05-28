@@ -5,11 +5,18 @@ import Book from '../components/Book';
 const BooksList = ({ books }) => (
   <div>
     <table>
-      {books.map((book) => (
+      <thead>
         <tr>
-          <Book book={book} />
+          <th>Id</th>
+          <th>Title: {books.length} </th>
+          <th>Category</th>
         </tr>
-      ))}
+      </thead>
+      <tbody>
+        {books.map((book) => (
+          <Book book={book} key={book.id} />
+        ))}
+      </tbody>
     </table>
   </div>
 );
