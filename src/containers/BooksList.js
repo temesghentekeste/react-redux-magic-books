@@ -8,7 +8,10 @@ const BooksList = ({ books }) => (
       <thead>
         <tr>
           <th>Id</th>
-          <th>Title: {books.length} </th>
+          <th>
+            Title:
+            {books.length}
+          </th>
           <th>Category</th>
         </tr>
       </thead>
