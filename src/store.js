@@ -6,7 +6,7 @@ const initialState = {
     {
       id: Math.random() * 100,
       title: 'As a Man Thinketh',
-      category: 'Self-help',
+      category: 'Self-Help',
     },
     {
       id: Math.random() * 100,
@@ -16,7 +16,7 @@ const initialState = {
     {
       id: Math.random() * 100,
       title: 'Oliver Twist',
-      category: 'Social Nover',
+      category: 'Social Novel',
     },
   ],
 };
