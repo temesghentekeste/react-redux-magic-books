@@ -8,8 +8,6 @@ A basic book store app developed using React and Redux.
 
 ### Search Page
 
-![screenshot]()
-
 ## Project Specification
 
 - [ ] Use create-react-app to initialize a new React app
