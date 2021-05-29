@@ -4,9 +4,9 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <BookForm />
+    <div className="mainContainer">
       <BooksList />
+      <BookForm />
     </div>
   );
 }

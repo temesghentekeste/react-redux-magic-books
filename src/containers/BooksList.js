@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import './BookList.css';
 
 const BooksList = ({ books }) => (
-  <div>
+  <div className="bookList">
     <table>
       <thead>
         <tr>
