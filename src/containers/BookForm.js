@@ -23,14 +23,15 @@ const BookForm = () => {
         <input
           type="text"
           name="title"
-          ref="titleRef"
+          ref={titleRef}
           placeholder="Book Title"
         />
         <select name="category">
-          {categories.map((category, index) => (
-            <option key={index}>{category}</option>
+          {categories.map((category) => (
+            <option key={category}>{category}</option>
           ))}
         </select>
+        <button type="submit">Add Book</button>
       </form>
     </div>
   );
