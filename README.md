@@ -13,6 +13,13 @@ A basic book store app developed using React and Redux.
 - [ ] Use create-react-app to initialize a new React app
 - [ ] Add prop-types using npm for typechecking props.
 - [ ] Use create-react-app-buildpack to deploy the app to Heroku
+- [ ] Prepare the directory structure to house components and containers logic separately
+- [ ] Implement the App component
+- [ ] Implement the BookList component
+- [ ] Implement the Book component
+- [ ] Implement the BookForm component
+- [ ] Define the Redux actions and reducers
+- [ ] Initialize the Redux store
 
 ## Built With
 
@@ -20,6 +27,11 @@ A basic book store app developed using React and Redux.
 - [ ] React
 - [ ] React-DOM
 - [ ] React-Create-App
+- [ ] Redux
+- [ ] React-Redux
+- [ ] Prop-Types
+- [ ] ESLint
+- [ ] StyleLint
 - [ ] Heroku
 - [ ] npm
 - [ ] CSS
