@@ -8,7 +8,10 @@ export const createBook = (book) => {
   };
 };
 
-export const deleteBook = (book) => ({
-  type: DELETE_BOOK,
-  payload: book,
-});
+export const deleteBook = (book) => {
+  console.log('Action dispatched: index action');
+  return {
+    type: DELETE_BOOK,
+    payload: book,
+  };
+};

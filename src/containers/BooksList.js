@@ -1,10 +1,15 @@
+/* eslint-disable arrow-body-style */
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
+import { deleteBook } from '../actions';
 import './BookList.css';
 
-const BooksList = ({ books }) => {
-  console.log(books);
+const BooksList = ({ books, deleteBook }) => {
+  const handleRemoveBook = (book) => {
+    console.log('clicked');
+    deleteBook(book);
+  };
   return (
     <div className="bookList">
       <table>
@@ -16,11 +21,16 @@ const BooksList = ({ books }) => {
               {books.length}
             </th>
             <th>Category</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           {books.map((book) => (
-            <Book book={book} key={book.id} />
+            <Book
+              book={book}
+              key={book.id}
+              handleRemoveBook={handleRemoveBook}
+            />
           ))}
         </tbody>
       </table>
@@ -32,8 +42,17 @@ const mapStateToProps = (state) => ({
   books: state.books,
 });
 
-BooksList.propTypes = {
-  books: PropTypes.instanceOf(Array).isRequired,
+const mapDispatchToProps = (dispatch) => {
+  return {
+    deleteBook: (book) => {
+      dispatch(deleteBook(book));
+    },
+  };
 };
 
-export default connect(mapStateToProps, null)(BooksList);
+BooksList.propTypes = {
+  books: PropTypes.instanceOf(Array).isRequired,
+  deleteBook: PropTypes.func.isRequired,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
