@@ -7,7 +7,6 @@ import './BookList.css';
 
 const BooksList = ({ books, deleteBook }) => {
   const handleRemoveBook = (book) => {
-    console.log('clicked');
     deleteBook(book);
   };
   return (

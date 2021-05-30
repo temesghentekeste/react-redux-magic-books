@@ -38,7 +38,6 @@ const BookForm = ({ createBook }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const book = { id: Math.floor(Math.random() * 100), ...state };
-    console.log(book);
     createBook(book);
     setState({
       title: '',
