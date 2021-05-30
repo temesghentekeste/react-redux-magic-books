@@ -20,6 +20,8 @@ A basic book store app developed using React and Redux.
 - [ ] Implement the BookForm component
 - [ ] Define the Redux actions and reducers
 - [ ] Initialize the Redux store
+- [ ] Make the BooksForm component stateful
+- [ ] Connect the REMOVE_BOOK action to the component
 
 ## Built With
 
