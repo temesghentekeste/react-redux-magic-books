@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const categories = [
   'Action',
@@ -11,6 +11,9 @@ const categories = [
 ];
 
 const BookForm = () => {
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+
   const titleRef = useRef('');
 
   useEffect(() => {
