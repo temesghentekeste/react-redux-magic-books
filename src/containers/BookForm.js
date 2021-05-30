@@ -31,9 +31,14 @@ const BookForm = () => {
     titleRef.current.focus();
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(state);
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="title"
