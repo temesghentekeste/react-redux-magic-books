@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable prefer-destructuring */
+
 import { useState, useRef, useEffect } from 'react';
 
 const categories = [
@@ -11,8 +14,16 @@ const categories = [
 ];
 
 const BookForm = () => {
-  const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
+  const [state, setState] = useState({ title: '', category: '' });
+
+  const handleChage = (e) => {
+    const value = e.target.value.trim();
+    const name = e.target.name;
+    setState({
+      ...state,
+      [name]: value,
+    });
+  };
 
   const titleRef = useRef('');
 
@@ -27,9 +38,11 @@ const BookForm = () => {
           type="text"
           name="title"
           ref={titleRef}
+          value={state.title}
+          onChange={(e) => handleChage(e)}
           placeholder="Book Title"
         />
-        <select name="category">
+        <select name="category" onChange={(e) => handleChage(e)}>
           {categories.map((category) => (
             <option key={category}>{category}</option>
           ))}
