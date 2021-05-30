@@ -3,27 +3,30 @@ import { connect } from 'react-redux';
 import Book from '../components/Book';
 import './BookList.css';
 
-const BooksList = ({ books }) => (
-  <div className="bookList">
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>
-            Title:
-            {books.length}
-          </th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-        {books.map((book) => (
-          <Book book={book} key={book.id} />
-        ))}
-      </tbody>
-    </table>
-  </div>
-);
+const BooksList = ({ books }) => {
+  console.log(books);
+  return (
+    <div className="bookList">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>
+              Title:
+              {books.length}
+            </th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {books.map((book) => (
+            <Book book={book} key={book.id} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
 
 const mapStateToProps = (state) => ({
   books: state.books,

@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
+/* eslint-disable arrow-body-style */
 
 import { useState, useRef, useEffect } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions';
 
 const categories = [
   'Action',
@@ -13,8 +17,8 @@ const categories = [
   'Sci-Fi',
 ];
 
-const BookForm = () => {
-  const [state, setState] = useState({ title: '', category: '' });
+const BookForm = ({ createBook }) => {
+  const [state, setState] = useState({ title: '', category: 'Action' });
 
   const handleChage = (e) => {
     const value = e.target.value.trim();
@@ -33,7 +37,9 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
+    const book = { id: Math.floor(Math.random() * 100), ...state };
+    console.log(book);
+    createBook(book);
   };
 
   return (
@@ -58,4 +64,16 @@ const BookForm = () => {
   );
 };
 
-export default BookForm;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createBook: (book) => {
+      dispatch(createBook(book));
+    },
+  };
+};
+
+BookForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
+
+export default connect(null, mapDispatchToProps)(BookForm);
