@@ -40,6 +40,10 @@ const BookForm = ({ createBook }) => {
     const book = { id: Math.floor(Math.random() * 100), ...state };
     console.log(book);
     createBook(book);
+    setState({
+      title: '',
+      category: 'Action',
+    });
   };
 
   return (
@@ -53,7 +57,11 @@ const BookForm = ({ createBook }) => {
           onChange={(e) => handleChage(e)}
           placeholder="Book Title"
         />
-        <select name="category" onChange={(e) => handleChage(e)}>
+        <select
+          name="category"
+          value={state.category}
+          onChange={(e) => handleChage(e)}
+        >
           {categories.map((category) => (
             <option key={category}>{category}</option>
           ))}
