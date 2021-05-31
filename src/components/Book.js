@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => {
@@ -6,14 +8,18 @@ const Book = ({ book, handleRemoveBook }) => {
     <card className="bookCard">
       <div className="bookCard__basicInfo">
         <p className="bookCard__basicInfo-category">{category}</p>
-        <p className="bookCard__basicInfo-user">Temesghen Tekeste</p>
         <h3 className="bookCard__basicInfo-title">{title}</h3>
-        <div className="bookCard__basicInfo-actions">
-          <span>Comments</span>
-          <button type="submit" onClick={() => handleRemoveBook(book)}>
+        <p className="bookCard__basicInfo-user">Temesghen Bahta</p>
+        <div className="bookCard__basicInfo__footer">
+          <span className="bookCard__basicInfo__footer-comments">Comments</span>
+          <span
+            type="submit"
+            onClick={() => handleRemoveBook(book)}
+            className="bookCard__basicInfo__footer-remove"
+          >
             Remove
-          </button>
-          <span>Edit</span>
+          </span>
+          <span className="bookCard__basicInfo__footer-edit">Edit</span>
         </div>
       </div>
 

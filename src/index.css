@@ -97,3 +97,86 @@ body {
   letter-spacing: normal;
   color: var(--black-two);
 }
+
+.bookCard__basicInfo-title {
+  width: 197px;
+  height: 29px;
+  margin: 3px 323px 0 0;
+  font-family: RobotoSlab;
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.bookCard__basicInfo-user {
+  width: 107px;
+  height: 19px;
+  margin: 4px 0 0;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookCard__basicInfo__footer {
+  margin-top: 21px;
+}
+
+.bookCard__basicInfo__footer-comments {
+  width: 73px;
+  height: 19px;
+  margin: 3px 15px 2px 0;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookCard__basicInfo__footer-comments:hover,
+.bookCard__basicInfo__footer-edit:hover {
+  cursor: not-allowed;
+}
+
+.bookCard__basicInfo__footer-remove {
+  width: 54px;
+  height: 19px;
+  margin: 3px 15px 2px 14px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookCard__basicInfo__footer-remove:hover {
+  cursor: pointer;
+}
+
+.bookCard__basicInfo__footer-edit {
+  width: 27px;
+  height: 19px;
+  margin: 3px 298px 2px 17px;
+  font-family: RobotoSlab;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
