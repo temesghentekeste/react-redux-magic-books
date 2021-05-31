@@ -6,7 +6,8 @@ import { deleteBook } from '../actions';
 import './BookList.css';
 import CategoryFilter from './CategoryFilter';
 
-const BooksList = ({ books, deleteBook }) => {
+const BooksList = ({ books, deleteBook, filter }) => {
+  console.log(filter);
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
@@ -43,6 +44,7 @@ const BooksList = ({ books, deleteBook }) => {
 
 const mapStateToProps = (state) => ({
   books: state.books,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -56,6 +58,7 @@ const mapDispatchToProps = (dispatch) => {
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   deleteBook: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
