@@ -22,6 +22,9 @@ A basic book store app developed using React and Redux.
 - [ ] Initialize the Redux store
 - [ ] Make the BooksForm component stateful
 - [ ] Connect the REMOVE_BOOK action to the component
+- [ ] Enhance the Redux store by adding a new state named filter and add a new filter reducer
+- [ ] Implement the CategoryFilter component
+- [ ] Keep the filter value in the Redux store
 
 ## Built With
 

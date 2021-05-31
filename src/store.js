@@ -11,12 +11,12 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 100),
       title: 'I, Robot ',
-      category: 'Sci-Fic',
+      category: 'Sci-Fi',
     },
     {
       id: Math.floor(Math.random() * 100),
       title: 'Oliver Twist',
-      category: 'Social Novel',
+      category: 'Kids',
     },
   ],
 };
