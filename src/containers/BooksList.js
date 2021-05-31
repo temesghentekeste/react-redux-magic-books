@@ -7,13 +7,23 @@ import './BookList.css';
 import CategoryFilter from './CategoryFilter';
 
 const BooksList = ({ books, deleteBook, filter }) => {
-  console.log(filter);
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
+
+  const handleFilterChange = () => {
+    filterBooks(filter);
+  };
+
+  let filteredBooks;
+  if (filter === 'All') {
+    filteredBooks = books;
+  } else {
+    filteredBooks = books.filter((book) => book.category === filter);
+  }
   return (
     <div className="books">
-      <CategoryFilter />
+      <CategoryFilter filterChange={handleFilterChange} />
       <div className="bookList">
         <table>
           <thead>
@@ -28,7 +38,7 @@ const BooksList = ({ books, deleteBook, filter }) => {
             </tr>
           </thead>
           <tbody>
-            {books.map((book) => (
+            {filteredBooks.map((book) => (
               <Book
                 book={book}
                 key={book.id}
