@@ -8,4 +8,43 @@ body {
   max-width: 1120px;
   margin: auto;
   background: #f5f6fa;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.categoryFilter {
+  margin-top: 149px;
+  background: #fff;
+  height: 143px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.categoryFilter__left {
+  flex: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categoryFilter__left-heading {
+  font-size: 30px;
+  color: #0290ff;
+}
+
+.categoryFilter__left-caption {
+  font-weight: 300;
+}
+
+.categoryFilter__right {
+  flex: 0.5;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.categoryFilter__right > .MuiSvgIcon-root {
+  height: 45px;
+  width: 45px;
+  color: #0290ff;
 }

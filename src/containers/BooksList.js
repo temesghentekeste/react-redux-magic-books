@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint-disable object-curly-newline */
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
@@ -6,9 +7,7 @@ import { deleteBook, filterBooks } from '../actions';
 import './BookList.css';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({
-  books, deleteBook, filter, filterBooks,
-}) => {
+const BooksList = ({ books, deleteBook, filter, filterBooks }) => {
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
@@ -18,7 +17,7 @@ const BooksList = ({
   };
 
   let filteredBooks;
-  if (filter === 'All') {
+  if (filter === 'All' || filter === 'Categories') {
     filteredBooks = books;
   } else {
     filteredBooks = books.filter((book) => book.category === filter);
