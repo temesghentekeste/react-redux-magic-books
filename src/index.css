@@ -1,3 +1,7 @@
+:root {
+  --black-two: #121212;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -60,4 +64,36 @@ body {
     var(--dodger-blue)
   );
   border-image-slice: 1;
+}
+
+.books__list {
+  margin-top: 38px;
+}
+
+.bookCard {
+  background: #fff;
+  padding: 1.5rem 5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e8e8e8;
+}
+
+.bookCard__basicInfo {
+  flex: 0.6;
+}
+
+.bookCard__basicInfo-category {
+  width: 49px;
+  height: 18px;
+  margin: 0 39px 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
 }

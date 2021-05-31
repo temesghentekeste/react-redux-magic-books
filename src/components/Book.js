@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
 const Book = ({ book, handleRemoveBook }) => {
-  const { id, title, category } = book;
+  const { title, category } = book;
   return (
     <card className="bookCard">
       <div className="bookCard__basicInfo">
-        <span className="bookCard__basicInfo-category">{id}</span>
+        <p className="bookCard__basicInfo-category">{category}</p>
+        <p className="bookCard__basicInfo-user">Temesghen Tekeste</p>
         <h3 className="bookCard__basicInfo-title">{title}</h3>
-        <span className="bookCard__basicInfo-user">{category}</span>
         <div className="bookCard__basicInfo-actions">
           <span>Comments</span>
           <button type="submit" onClick={() => handleRemoveBook(book)}>
