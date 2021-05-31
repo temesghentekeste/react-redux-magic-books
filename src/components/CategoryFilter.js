@@ -20,16 +20,20 @@ const CategoryFilter = ({ filterChange }) => {
   };
   return (
     <div className="categoryFilter">
-      <h1>Magic Books</h1>
-      <select
-        name="filter"
-        value={category}
-        onChange={(e) => handleCategoryChange(e)}
-      >
-        {categories.map((category) => (
-          <option key={category}>{category}</option>
-        ))}
-      </select>
+      <div className="categoryFilter__right">
+        <h1>Bookstore CMS</h1>
+        <h3>Books</h3>
+        <select
+          name="filter"
+          value={category}
+          onChange={(e) => handleCategoryChange(e)}
+        >
+          {categories.map((category) => (
+            <option key={category}>{category}</option>
+          ))}
+        </select>
+      </div>
+      <div className="categoryFilter__left"></div>
     </div>
   );
 };
