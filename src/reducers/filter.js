@@ -1,12 +1,12 @@
 /* eslint-disable comma-dangle */
 import { CHANGE_FILTER } from '../actions/actionTypes';
 
-const initialState = [];
+const filter = 'All';
 
-const filterReducer = (state = initialState, action) => {
+const filterReducer = (state = filter, action) => {
   switch (action.type) {
     case CHANGE_FILTER:
-      return [...state, action.payload];
+      return action.payload;
 
     default:
       return state;
