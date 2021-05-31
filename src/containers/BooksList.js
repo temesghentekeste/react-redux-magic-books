@@ -11,8 +11,9 @@ const BooksList = ({ books, deleteBook, filter }) => {
     deleteBook(book);
   };
 
-  const handleFilterChange = () => {
-    filterBooks(filter);
+  const handleFilterChange = (category) => {
+    console.log(category);
+    filterBooks(category);
   };
 
   let filteredBooks;
@@ -21,6 +22,7 @@ const BooksList = ({ books, deleteBook, filter }) => {
   } else {
     filteredBooks = books.filter((book) => book.category === filter);
   }
+  console.log(filteredBooks);
   return (
     <div className="books">
       <CategoryFilter filterChange={handleFilterChange} />
