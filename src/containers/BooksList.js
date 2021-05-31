@@ -6,13 +6,14 @@ import { deleteBook, filterBooks } from '../actions';
 import './BookList.css';
 import CategoryFilter from './CategoryFilter';
 
-const BooksList = ({ books, deleteBook, filter }) => {
+const BooksList = ({
+  books, deleteBook, filter, filterBooks,
+}) => {
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
 
   const handleFilterChange = (category) => {
-    console.log(category);
     filterBooks(category);
   };
 
@@ -22,7 +23,6 @@ const BooksList = ({ books, deleteBook, filter }) => {
   } else {
     filteredBooks = books.filter((book) => book.category === filter);
   }
-  console.log(filteredBooks);
   return (
     <div className="books">
       <CategoryFilter filterChange={handleFilterChange} />
@@ -57,6 +57,7 @@ const BooksList = ({ books, deleteBook, filter }) => {
 const mapStateToProps = (state) => ({
   books: state.books,
   filter: state.filter,
+  filterBooks: PropTypes.func.isRequired,
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -64,8 +65,8 @@ const mapDispatchToProps = (dispatch) => {
     deleteBook: (book) => {
       dispatch(deleteBook(book));
     },
-    filterBooks: (filter) => {
-      dispatch(filterBooks(filter));
+    filterBooks: (category) => {
+      dispatch(filterBooks(category));
     },
   };
 };
@@ -73,6 +74,7 @@ const mapDispatchToProps = (dispatch) => {
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Array).isRequired,
   deleteBook: PropTypes.func.isRequired,
+  filterBooks: PropTypes.func.isRequired,
   filter: PropTypes.string.isRequired,
 };
 

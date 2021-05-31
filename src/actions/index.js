@@ -10,7 +10,10 @@ export const deleteBook = (book) => ({
   payload: book,
 });
 
-export const filterBooks = (category) => ({
-  type: CHANGE_FILTER,
-  payload: category,
-});
+export const filterBooks = (category) => {
+  console.log(category, 'Dispatched');
+  return {
+    type: CHANGE_FILTER,
+    payload: category,
+  };
+};
