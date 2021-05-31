@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
-import { deleteBook } from '../actions';
+import { deleteBook, filterBooks } from '../actions';
 import './BookList.css';
 import CategoryFilter from './CategoryFilter';
 
@@ -51,6 +51,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     deleteBook: (book) => {
       dispatch(deleteBook(book));
+    },
+    filterBooks: (filter) => {
+      dispatch(filterBooks(filter));
     },
   };
 };
