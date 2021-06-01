@@ -137,7 +137,7 @@ const BookForm = ({ createBook }) => {
             native: true,
           }}
           variant="outlined"
-          className={`${classes.selectEmpty} bookFormContainer__form-select`}
+          className="bookFormContainer__form-select"
         >
           {categoriesV2.map((option) => (
             <option key={option.value} value={option.value}>
