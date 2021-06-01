@@ -1,9 +1,10 @@
+/* stylelint-disable ont-family-no-missing-generic-family-keyword */
 :root {
   --black-two: #121212;
   --medium-blue: #307bbe;
   --dodger-blue: #379cf6;
   --white: #fff;
-  --warm-grey: #888888;
+  --warm-grey: #888;
 }
 
 * {
@@ -86,7 +87,7 @@ body {
 .bookCard__basicInfo-category {
   margin: 0 39px 0 0;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   font-weight: bold;
   color: var(--black-two);
@@ -96,7 +97,7 @@ body {
   width: 197px;
   height: 29px;
   margin: 3px 323px 0 0;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: -0.2px;
@@ -104,7 +105,7 @@ body {
 }
 
 .bookCard__basicInfo-user {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -115,7 +116,7 @@ body {
 }
 
 .bookCard__basicInfo__footer-comments {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -128,24 +129,15 @@ body {
   border: solid 1px #e8e8e8;
 }
 
-.bookCard__basicInfo__footer-comments:hover,
-.bookCard__basicInfo__footer-edit:hover {
-  cursor: not-allowed;
-}
-
 .bookCard__basicInfo__footer-remove {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
 }
 
-.bookCard__basicInfo__footer-remove:hover {
-  cursor: pointer;
-}
-
 .bookCard__basicInfo__footer-edit {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #4386bf;
@@ -183,7 +175,7 @@ body {
   width: 68px;
   height: 39px;
   margin: 1px 92px 0 11px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 32px;
   color: var(--black-two);
 }
@@ -193,7 +185,7 @@ body {
   height: 18px;
   margin: 7px 79px 12px 12px;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
   color: var(--black-two);
 }
@@ -206,14 +198,14 @@ body {
 
 .bookCard__currentChapter-chapter {
   opacity: 0.5;
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 13px;
   font-weight: 300;
   color: var(--black-two);
 }
 
 .bookCard__currentChapter-currentLesson {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: -0.4px;
@@ -241,7 +233,7 @@ body {
 
 .bookFormContainer__title {
   margin: 29px 0;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 20px;
   font-weight: bold;
   letter-spacing: -0.18px;
@@ -281,12 +273,22 @@ body {
   border: solid 1px #e8e8e8;
 }
 
+.bookCard__basicInfo__footer-remove:hover {
+  cursor: pointer;
+}
+
+.bookCard__basicInfo__footer-comments:hover,
+.bookCard__basicInfo__footer-edit:hover {
+  cursor: not-allowed;
+}
+
 @media (max-width: 865px) {
   .categoryFilter {
     margin-top: 2rem;
     display: block;
     text-align: center;
   }
+
   .categoryFilter__left-caption {
     display: none;
   }
@@ -320,7 +322,7 @@ body {
 
   .bookCard__basicInfo__footer {
     display: block;
-    margin: auto;
+    margin: 10px;
   }
 
   .bookCard__progress {
@@ -330,10 +332,6 @@ body {
 
   .bookCard__progress__percent {
     width: 90px;
-  }
-
-  .bookCard__basicInfo__footer {
-    margin: 10px;
   }
 
   .bookFormContainer__line {
@@ -368,6 +366,7 @@ body {
   .categoryFilter {
     margin-top: 40px;
   }
+
   .categoryFilter__left-heading {
     font-size: 1.5rem;
   }
