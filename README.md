@@ -43,6 +43,7 @@ A basic book store app developed using React and Redux.
 - [ ] React-Create-App
 - [ ] Redux
 - [ ] React-Redux
+- [ ] Material UI
 - [ ] Prop-Types
 - [ ] ESLint
 - [ ] StyleLint
