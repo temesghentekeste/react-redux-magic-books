@@ -6,7 +6,15 @@ A basic book store app developed using React and Redux.
 
 **Click [here](https://magicbooks-temesghen.herokuapp.com/) in order to see a Live Demo of this project.**
 
-### Search Page
+## Screenshots
+
+### Desktop
+
+![screenshot](./public/images/screenshot-01.png)
+
+### Small Screen Devices
+
+![screenshot](./public/images/screenshot-02.png)
 
 ## Project Specification
 
@@ -25,6 +33,7 @@ A basic book store app developed using React and Redux.
 - [ ] Enhance the Redux store by adding a new state named filter and add a new filter reducer
 - [ ] Implement the CategoryFilter component
 - [ ] Keep the filter value in the Redux store
+- [ ] Implement the styling of the different components based on a given design
 
 ## Built With
 
