@@ -42,8 +42,6 @@ const categories = [
 ];
 
 const CategoryFilter = ({ filterChange }) => {
-  // const classes = useStyles();
-
   const [category, setCategory] = useState('All');
   const handleCategoryChange = (e) => {
     filterChange(e.target.value);
@@ -66,6 +64,7 @@ const CategoryFilter = ({ filterChange }) => {
             native: true,
           }}
           variant="outlined"
+          className="categoryFilter__left-categories"
         >
           {categories.map((option) => (
             <option key={option.value} value={option.value}>
