@@ -24,13 +24,12 @@ const Book = ({ book, handleRemoveBook }) => {
       </div>
 
       <div className="bookCard__progress">
-        <div className="bookCard__progress-oval-2" />
+        <div>
+          <div className="bookCard__progress-oval-2" />
+        </div>
         <div className="bookCard__progress__percent">
           <span className="bookCard__progress__percent-complete">64%</span>
-          <span
-            className="bookCard__progress__percent-completedText {
-"
-          >
+          <span className="bookCard__progress__percent-completedText">
             completed
           </span>
         </div>
