@@ -12,6 +12,7 @@ const Book = ({ book, handleRemoveBook }) => {
         <p className="bookCard__basicInfo-user">Temesghen Bahta</p>
         <div className="bookCard__basicInfo__footer">
           <span className="bookCard__basicInfo__footer-comments">Comments</span>
+          <span className="bookCard__basicInfo__footer-line" />
           <span
             type="submit"
             onClick={() => handleRemoveBook(book)}
@@ -19,6 +20,8 @@ const Book = ({ book, handleRemoveBook }) => {
           >
             Remove
           </span>
+          <span className="bookCard__basicInfo__footer-line" />
+
           <span className="bookCard__basicInfo__footer-edit">Edit</span>
         </div>
       </div>

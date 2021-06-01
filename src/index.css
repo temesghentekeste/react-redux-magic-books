@@ -121,6 +121,13 @@ body {
   color: #4386bf;
 }
 
+.bookCard__basicInfo__footer-line {
+  width: 2px;
+  height: 24px;
+  margin: 12px 17px 0 15px;
+  border: solid 1px #e8e8e8;
+}
+
 .bookCard__basicInfo__footer-comments:hover,
 .bookCard__basicInfo__footer-edit:hover {
   cursor: not-allowed;
