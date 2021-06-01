@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="mainContainer">
       <BooksList />
+      <hr />
       <BookForm />
     </div>
   );

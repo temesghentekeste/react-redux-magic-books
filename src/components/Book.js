@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Book = ({ book, handleRemoveBook }) => {
   const { title, category } = book;
   return (
-    <card className="bookCard">
+    <div className="bookCard">
       <div className="bookCard__basicInfo">
         <p className="bookCard__basicInfo-category">{category}</p>
         <h3 className="bookCard__basicInfo-title">{title}</h3>
@@ -24,19 +24,31 @@ const Book = ({ book, handleRemoveBook }) => {
       </div>
 
       <div className="bookCard__progress">
-        <div className="Oval-2" />
-        <div>
-          <span>64 %</span>
-          <span>completed</span>
+        <div className="bookCard__progress-oval-2" />
+        <div className="bookCard__progress__percent">
+          <span className="bookCard__progress__percent-complete">64%</span>
+          <span
+            className="bookCard__progress__percent-completedText {
+"
+          >
+            completed
+          </span>
         </div>
       </div>
 
       <div className="bookCard__currentChapter">
-        <h4>Current Chapter</h4>
-        <span>Chapter 17</span>
-        <button type="submit">update progress</button>
+        <h4 className="bookCard__currentChapter-chapter">Current Chapter</h4>
+        <span className="bookCard__currentChapter-currentLesson">
+          Chapter 17
+        </span>
+        <button
+          type="submit"
+          className="bookCard__currentChapter-updateProgress"
+        >
+          update progress
+        </button>
       </div>
-    </card>
+    </div>
   );
 };
 

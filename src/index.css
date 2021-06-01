@@ -3,6 +3,7 @@
   --medium-blue: #307bbe;
   --dodger-blue: #379cf6;
   --white: #fff;
+  --warm-grey: #888888;
 }
 
 * {
@@ -265,4 +266,50 @@ body {
   border: none;
   color: var(--white);
   text-transform: uppercase;
+}
+
+.mainContainer hr {
+  margin: 2rem 0;
+}
+
+.bookFormContainer {
+  margin-bottom: 2rem;
+}
+
+.bookFormContainer__title {
+  margin: 29px 0;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: var(--warm-grey);
+  text-transform: uppercase;
+}
+
+.bookFormContainer__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bookFormContainer__form-title {
+  flex: 0.6;
+}
+
+.bookFormContainer__form-select {
+  flex: 0.2;
+}
+
+.bookFormContainer__form > button {
+  height: 3.2rem;
+  flex: 0.15;
+  background: #0290ff;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
 }
