@@ -1,29 +1,11 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable arrow-body-style */
-/* eslint-disable object-curly-newline */
 
 import { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {
-  TextField,
-  Button,
-  Select,
-  MenuItem,
-  makeStyles,
-} from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 import { createBook } from '../actions';
-
-// const categories = [
-//   'Action',
-//   'Biography',
-//   'History',
-//   'Horror',
-//   'Kids',
-//   'Learning',
-//   'Sci-Fi',
-// ];
 
 const categoriesV2 = [
   {
@@ -59,16 +41,8 @@ const categoriesV2 = [
   },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  formControl: {
-    margin: theme.spacing(2),
-    minWidth: 120,
-  },
-}));
-
 const BookForm = ({ createBook }) => {
   const [state, setState] = useState({ title: '', category: '' });
-  const classes = useStyles();
 
   const handleChage = (e) => {
     const value = e.target.value.trim();
@@ -109,23 +83,7 @@ const BookForm = ({ createBook }) => {
           onChange={(e) => handleChage(e)}
           className="bookFormContainer__form-title"
         />
-        {/* <Select
-          name="category"
-          value={state.category}
-          onChange={(e) => handleChage(e)}
-          displayEmpty
-          className={`${classes.selectEmpty} bookFormContainer__form-select`}
-          inputProps={{ 'aria-label': 'Without label' }}
-        >
-          <MenuItem key="" value="">
-            Categories
-          </MenuItem>
-          {categories.map((category) => (
-            <MenuItem key={category} value={category}>
-              {category}
-            </MenuItem>
-          ))}
-        </Select> */}
+
         <TextField
           id="outlined-select-category"
           name="category"
