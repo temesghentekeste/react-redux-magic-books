@@ -267,6 +267,13 @@ body {
   border-radius: 5px;
 }
 
+.bookFormContainer__line {
+  width: 2px;
+  height: 70px;
+  margin: 18px 59px 0 79px;
+  border: solid 1px #e8e8e8;
+}
+
 @media (max-width: 865px) {
   .categoryFilter {
     margin-top: 2rem;
@@ -320,6 +327,10 @@ body {
 
   .bookCard__basicInfo__footer {
     margin: 10px;
+  }
+
+  .bookFormContainer__line {
+    display: none;
   }
 }
 

@@ -22,7 +22,6 @@ const Book = ({ book, handleRemoveBook }) => {
           <span className="bookCard__basicInfo__footer-edit">Edit</span>
         </div>
       </div>
-
       <div className="bookCard__progress">
         <div>
           <div className="bookCard__progress-oval-2" />
@@ -34,7 +33,7 @@ const Book = ({ book, handleRemoveBook }) => {
           </span>
         </div>
       </div>
-
+      <div className="bookFormContainer__line" />
       <div className="bookCard__currentChapter">
         <h4 className="bookCard__currentChapter-chapter">Current Chapter</h4>
         <span className="bookCard__currentChapter-currentLesson">
