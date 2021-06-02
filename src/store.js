@@ -6,7 +6,7 @@ const initialState = {
     {
       id: Math.floor(Math.random() * 100),
       title: 'As a Man Thinketh',
-      category: 'Self-Help',
+      category: 'Learning',
     },
     {
       id: Math.floor(Math.random() * 100),

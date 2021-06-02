@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint-disable object-curly-newline */
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Book from '../components/Book';
@@ -6,9 +7,7 @@ import { deleteBook, filterBooks } from '../actions';
 import './BookList.css';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({
-  books, deleteBook, filter, filterBooks,
-}) => {
+const BooksList = ({ books, deleteBook, filter, filterBooks }) => {
   const handleRemoveBook = (book) => {
     deleteBook(book);
   };
@@ -18,7 +17,7 @@ const BooksList = ({
   };
 
   let filteredBooks;
-  if (filter === 'All') {
+  if (filter === 'All' || filter === 'Categories') {
     filteredBooks = books;
   } else {
     filteredBooks = books.filter((book) => book.category === filter);
@@ -26,29 +25,10 @@ const BooksList = ({
   return (
     <div className="books">
       <CategoryFilter filterChange={handleFilterChange} />
-      <div className="bookList">
-        <table>
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>
-                Title:
-                {books.length}
-              </th>
-              <th>Category</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredBooks.map((book) => (
-              <Book
-                book={book}
-                key={book.id}
-                handleRemoveBook={handleRemoveBook}
-              />
-            ))}
-          </tbody>
-        </table>
+      <div className="books__list">
+        {filteredBooks.map((book) => (
+          <Book book={book} key={book.id} handleRemoveBook={handleRemoveBook} />
+        ))}
       </div>
     </div>
   );

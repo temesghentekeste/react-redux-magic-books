@@ -1,24 +1,48 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable arrow-body-style */
 
 import { useState, useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { TextField } from '@material-ui/core';
 import { createBook } from '../actions';
 
-const categories = [
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
+const categoriesV2 = [
+  {
+    value: 'Action',
+    label: 'Action',
+  },
+  {
+    value: 'Biography',
+    label: 'Biography',
+  },
+  {
+    value: 'History',
+    label: 'History',
+  },
+  {
+    value: 'Horror',
+    label: 'Horror',
+  },
+
+  {
+    value: 'Kids',
+    label: 'Kids',
+  },
+
+  {
+    value: 'Learning',
+    label: 'Learning',
+  },
+
+  {
+    value: 'Sci-Fi',
+    label: 'Sci-Fi',
+  },
 ];
 
 const BookForm = ({ createBook }) => {
-  const [state, setState] = useState({ title: '', category: 'Action' });
+  const [state, setState] = useState({ title: '', category: '' });
 
   const handleChage = (e) => {
     const value = e.target.value.trim();
@@ -46,26 +70,42 @@ const BookForm = ({ createBook }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
+    <div className="bookFormContainer">
+      <h1 className="bookFormContainer__title">add new book</h1>
+      <form onSubmit={handleSubmit} className="bookFormContainer__form">
+        <TextField
+          id="outlined-basic"
+          label="Book title"
+          variant="outlined"
           name="title"
           ref={titleRef}
           value={state.title}
           onChange={(e) => handleChage(e)}
-          placeholder="Book Title"
+          className="bookFormContainer__form-title"
         />
-        <select
+
+        <TextField
+          id="outlined-select-category"
           name="category"
+          select
+          label="Categories"
           value={state.category}
-          onChange={(e) => handleChage(e)}
+          onChange={handleChage}
+          SelectProps={{
+            native: true,
+          }}
+          variant="outlined"
+          className="bookFormContainer__form-select"
         >
-          {categories.map((category) => (
-            <option key={category}>{category}</option>
+          {categoriesV2.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
           ))}
-        </select>
-        <button type="submit">Add Book</button>
+        </TextField>
+        <button type="submit" className="formContainer__form-btnSubmit">
+          Add Book
+        </button>
       </form>
     </div>
   );

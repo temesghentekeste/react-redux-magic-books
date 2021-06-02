@@ -1,15 +1,44 @@
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import TextField from '@material-ui/core/TextField';
 
 const categories = [
-  'All',
-  'Action',
-  'Biography',
-  'History',
-  'Horror',
-  'Kids',
-  'Learning',
-  'Sci-Fi',
+  {
+    value: 'All',
+    label: 'All',
+  },
+  {
+    value: 'Action',
+    label: 'Action',
+  },
+  {
+    value: 'Biography',
+    label: 'Biography',
+  },
+  {
+    value: 'History',
+    label: 'History',
+  },
+  {
+    value: 'Horror',
+    label: 'Horror',
+  },
+
+  {
+    value: 'Kids',
+    label: 'Kids',
+  },
+
+  {
+    value: 'Learning',
+    label: 'Learning',
+  },
+
+  {
+    value: 'Sci-Fi',
+    label: 'Sci-Fi',
+  },
 ];
 
 const CategoryFilter = ({ filterChange }) => {
@@ -20,16 +49,33 @@ const CategoryFilter = ({ filterChange }) => {
   };
   return (
     <div className="categoryFilter">
-      <h1>Magic Books</h1>
-      <select
-        name="filter"
-        value={category}
-        onChange={(e) => handleCategoryChange(e)}
-      >
-        {categories.map((category) => (
-          <option key={category}>{category}</option>
-        ))}
-      </select>
+      <div className="categoryFilter__left">
+        <h1 className="categoryFilter__left-heading">Bookstore CMS</h1>
+        <h3 className="categoryFilter__left-caption">Books</h3>
+
+        <TextField
+          id="outlined-select-category"
+          name="category"
+          select
+          label="Categories"
+          value={category}
+          onChange={(e) => handleCategoryChange(e)}
+          SelectProps={{
+            native: true,
+          }}
+          variant="outlined"
+          className="categoryFilter__left-categories"
+        >
+          {categories.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </TextField>
+      </div>
+      <div className="categoryFilter__right">
+        <AccountCircleIcon />
+      </div>
     </div>
   );
 };
